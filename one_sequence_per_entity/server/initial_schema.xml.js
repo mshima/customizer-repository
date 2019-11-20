@@ -3,7 +3,6 @@ const file = gen => `${gen.SERVER_MAIN_RES_DIR}config/liquibase/changelog/000000
 const tmpls = [
     {
         type: 'replaceContent',
-        debug: true,
         target: /^^\n((\s*)<.*id="00000000000000")/m,
         tmpl: `
 $2<property name="incrementBy" value="50" global="true" context="prod"/>
