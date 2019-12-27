@@ -5,12 +5,12 @@ const tmpls = [
         type: 'replaceContent',
         target: /^^\n((\s*)<.*id="00000000000000")/m,
         tmpl: `
-$2<property name="incrementBy" value="50" global="true" context="prod"/>
-$2<property name="incrementBy" value="1" global="true" context="dev"/>
+    <property name="incrementBy" value="50" global="true" context="prod"/>
+    <property name="incrementBy" value="1" global="true" context="dev"/>
 
-$2<changeSet id="00000000000010" author="jhipster">
-$2$2<createSequence sequenceName="user_sequence_generator" startValue="1050" incrementBy="\${incrementBy}"/>
-$2</changeSet>
+    <changeSet id="00000000000010" author="jhipster">
+        <createSequence sequenceName="user_sequence_generator" startValue="1050" incrementBy="\${incrementBy}"/>
+    </changeSet>
 
 $1`
     },
